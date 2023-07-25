@@ -221,7 +221,7 @@ def viewNotes(request):
     d = {"notes": notes}
     return render(request, "viewNotes.html", d)
 
-
+# helloe
 # view all notes
 def userAllNotes(request):
     if not request.user.is_authenticated:
