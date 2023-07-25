@@ -13,12 +13,13 @@
 {% endif %}
 
 
-{% if error == "yes"%}
+{% if error == "yes" %}
 <script>
     alert("Somthing wont wrong!! Upload Again")
-    window.location = ("{% url 'uploadNotes' %}");
+    window.location = ("{% url 'uploadNotes'%}");
 </script>
 {% endif %}
+
 <!-- style sheet -->
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 

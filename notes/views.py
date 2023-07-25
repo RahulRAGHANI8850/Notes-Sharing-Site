@@ -189,19 +189,20 @@ def uploadNotes(request):
     if request.method == "POST":
         b = request.POST.get("Branch")
         s = request.POST.get("Subject")
-        nf = request.FILES.get("uploadFile")
+        nf = request.FILES["uploadFile"]
         ft = request.POST.get("FileType")
         d = request.POST.get("Description")
-        u = User.objects.filter(username=request.user.username)
+        u = User.objects.get(username=request.user.username)
+        userid = u.id
         try:
-            newNote=Note.objects.create(
-                user=u,
+            newNote = Note.objects.create(
+                user=User(id=userid),
                 uploadDate=date.today(),
                 branch=b,
                 subject=s,
                 NotesFile=nf,
                 type=ft,
-                Description=d,
+                Decription=d,
                 status="pending",
             )
             newNote.save()

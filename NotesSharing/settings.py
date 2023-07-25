@@ -109,16 +109,15 @@ USE_I18N = True
 USE_TZ = True
 
 
+# static file path 
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'NotesSharing/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-
-# Static files  path 
-STATIC_URL = "static/" 
-STATIC_ROOT= os.path.join(BASE_DIR, 'static')
-
-
-# media folder creation path 
+# media path
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

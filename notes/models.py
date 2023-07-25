@@ -20,7 +20,7 @@ class Note(models.Model):
     uploadDate=models.DateField()
     branch=models.CharField(max_length=30)
     subject=models.CharField(max_length=30)
-    NotesFile=models.FileField()  # is me dekh error aa rahi he shayad se par kya error he vo pata nhi chal raha he 
+    NotesFile=models.FileField(upload_to="docs")   
     type=models.CharField(max_length=30)
     Decription=models.CharField(max_length=100,null=True)
     status=models.CharField(max_length=20)
