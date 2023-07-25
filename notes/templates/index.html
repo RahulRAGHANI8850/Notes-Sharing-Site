@@ -2,6 +2,16 @@
 {% load static %}
 
 {% block body %}
+<style>
+    .steps p a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .steps p a:hover {
+        color: royalblue;
+    }
+</style>
 
 <!-- stylesheet link -->
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -15,34 +25,37 @@
 
 
 <!-- four setps sec  -->
-<div class="container text-center pt-5"><h2 class="steps-text">Steps To perform </h2></div>
+<div class="container text-center pt-5">
+    <h2 class="steps-text">Steps To perform </h2>
+</div>
 <div class="four-steps container">
     <div class="row">
         <div class="col-sm-3">
             <div class="steps">
                 <p> <span class="fa fa-user-circle"></span></p>
-                <p> Cerate Account </p>
+                <p><a href="{% url 'signUpPage' %}"> Cerate Account</a></p>
             </div>
         </div>
 
         <div class="col-sm-3">
             <div class="steps">
                 <p> <span class="fa fa-sign-in"></span></p>
-                <p>Login Account</p>
+                <p><a href="{% url 'userLogin' %}"> Login Account</a></p>
             </div>
         </div>
 
         <div class="col-sm-3">
             <div class="steps">
                 <p> <span class="fa fa-upload"> </span></p>
-                <p>Upload Notes</p>
+                <p><a href="{% url 'userLogin' %}">Upload Notes</a></p>
             </div>
         </div>
+
 
         <div class="col-sm-3">
             <div class="steps">
                 <p> <span class="fa fa-download"></span></p>
-                <p> Download Notes</p>
+                <p><a href="{% url 'userLogin' %}"> Download Notes</a></p>
             </div>
         </div>
     </div>
